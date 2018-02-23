@@ -163,7 +163,7 @@ class ViewController: UIViewController {
         }
         return transSudoku
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let sudoku = generateSudoku(firstBlock: firstBlock(array: reorderNumberArray(array: numberArray)))
