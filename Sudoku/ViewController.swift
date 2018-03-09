@@ -114,27 +114,13 @@ class ViewController: UIViewController {
     
     func swapColumns(sudoku:[[[[Int]]]])-> [[[[Int]]]]{
         let columnSwapOrder0 = reorderNumberArray(array: [0,1,2])
-        let columnSwapOrder1 = reorderNumberArray(array: [0,1,2])
-        let columnSwapOrder2 = reorderNumberArray(array: [0,1,2])
         var transSudoku = sudoku
-        for k in 0...2{
-            for i in columnSwapOrder0{
-                for j in 0...2{
-                    transSudoku[k][0][j][i] = sudoku[k][0][j][columnSwapOrder0[i]]
-                }
-            }
-        }
-        for k in 0...2{
-            for i in columnSwapOrder1{
-                for j in 0...2{
-                    transSudoku[k][1][j][i] = sudoku[k][1][j][columnSwapOrder1[i]]
-                }
-            }
-        }
-        for k in 0...2{
-            for i in columnSwapOrder2{
-                for j in 0...2{
-                    transSudoku[k][2][j][i] = sudoku[k][2][j][columnSwapOrder2[i]]
+        for l in 0...2{
+            for k in 0...2{
+                for i in columnSwapOrder0{
+                    for j in 0...2{
+                        transSudoku[k][l][j][i] = sudoku[k][l][j][columnSwapOrder0[i]]
+                    }
                 }
             }
         }
@@ -143,22 +129,12 @@ class ViewController: UIViewController {
     
     func swapRows(sudoku:[[[[Int]]]])->[[[[Int]]]]{
         let rowSwapOrder0 = reorderNumberArray(array: [0,1,2])
-        let rowSwapOrder1 = reorderNumberArray(array: [0,1,2])
-        let rowSwapOrder2 = reorderNumberArray(array: [0,1,2])
         var transSudoku = sudoku
-        for j in rowSwapOrder0{
-            for i in 0...2{
-                transSudoku[0][i][j] = sudoku[0][i][rowSwapOrder0[j]]
-            }
-        }
-        for j in rowSwapOrder1{
-            for i in 0...2{
-                transSudoku[1][i][j] = sudoku[1][i][rowSwapOrder0[j]]
-            }
-        }
-        for j in rowSwapOrder2{
-            for i in 0...2{
-                transSudoku[2][i][j] = sudoku[2][i][rowSwapOrder0[j]]
+        for l in 0...2 {
+            for j in rowSwapOrder0{
+                for i in 0...2{
+                    transSudoku[l][i][j] = sudoku[l][i][rowSwapOrder0[j]]
+                }
             }
         }
         return transSudoku
@@ -180,7 +156,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
