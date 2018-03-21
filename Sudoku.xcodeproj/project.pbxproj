@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27380C1C20608FF4009AC6E1 /* SudokuVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27380C1B20608FF4009AC6E1 /* SudokuVerifier.swift */; };
+		27380C1E20609735009AC6E1 /* SudokuGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27380C1D20609735009AC6E1 /* SudokuGenerator.swift */; };
 		27C2B6472038A68E00DC904D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C2B6462038A68E00DC904D /* AppDelegate.swift */; };
 		27C2B6492038A68E00DC904D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C2B6482038A68E00DC904D /* ViewController.swift */; };
 		27C2B64C2038A68E00DC904D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C2B64A2038A68E00DC904D /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27380C1B20608FF4009AC6E1 /* SudokuVerifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuVerifier.swift; sourceTree = "<group>"; };
+		27380C1D20609735009AC6E1 /* SudokuGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuGenerator.swift; sourceTree = "<group>"; };
 		27C2B6432038A68E00DC904D /* Sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C2B6462038A68E00DC904D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C2B6482038A68E00DC904D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 			children = (
 				27C2B6462038A68E00DC904D /* AppDelegate.swift */,
 				27C2B6482038A68E00DC904D /* ViewController.swift */,
+				27380C1D20609735009AC6E1 /* SudokuGenerator.swift */,
+				27380C1B20608FF4009AC6E1 /* SudokuVerifier.swift */,
 				27C2B64A2038A68E00DC904D /* Main.storyboard */,
 				27C2B6502038A68E00DC904D /* Assets.xcassets */,
 				27C2B6522038A68E00DC904D /* LaunchScreen.storyboard */,
@@ -262,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27380C1E20609735009AC6E1 /* SudokuGenerator.swift in Sources */,
 				27C2B6492038A68E00DC904D /* ViewController.swift in Sources */,
 				27C2B64F2038A68E00DC904D /* Sudoku.xcdatamodeld in Sources */,
+				27380C1C20608FF4009AC6E1 /* SudokuVerifier.swift in Sources */,
 				27C2B6472038A68E00DC904D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
