@@ -23,8 +23,6 @@ class SudokuVerifier {
             }
             if rowSum == 45 && columnSum == 45{
                 verifier += 1
-            }else{
-                verifier += 0
             }
         }
         
@@ -40,8 +38,6 @@ class SudokuVerifier {
                 }
                 if blockSum == 45 {
                     verifier += 1
-                }else{
-                    verifier += 0
                 }
             }
         }
