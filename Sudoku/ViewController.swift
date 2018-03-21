@@ -19,13 +19,13 @@ class ViewController: UIViewController {
         let swapSudoku = sudokuGenerator.swapRows(sudoku: generatedSudoku)
         sudokuGenerator.printSudoku(sudoku: sudokuGenerator.swapColumns(sudoku: swapSudoku))
         
-        while sudokuVerifier.verifyRowAndColumn(array: sudokuArray) == true {
+        while sudokuVerifier.verify(array: sudokuArray) == true {
             print("Good")
             break
         }
         
-        while sudokuVerifier.verifyBlock(array: sudokuArray) == true {
-            print("Good")
+        while sudokuVerifier.verify(array: sudokuArray) == false {
+            print("Bad")
             break
         }
         

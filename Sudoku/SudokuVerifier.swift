@@ -10,8 +10,10 @@ import Foundation
 
 class SudokuVerifier {
     
-    func verifyRowAndColumn(array:[Int]) -> Bool {
+    func verify(array:[Int]) -> Bool {
         var verifier = 0
+        
+        //Verify the sum of each row or each column is 45
         for i in 0...8{
             var rowSum = 0
             var columnSum = 0
@@ -25,17 +27,8 @@ class SudokuVerifier {
                 verifier += 0
             }
         }
-        if verifier == 9{
-            return true
-        }else{
-            return false
-        }
         
-    }
-    
-    
-    func verifyBlock(array:[Int]) -> Bool {
-        var verifier = 0
+        //Verify the sum of each block is 45
         for l in 0...2 {
             for k in 0...2 {
                 var blockSum = 0
@@ -51,12 +44,13 @@ class SudokuVerifier {
                 }
             }
         }
-        if verifier == 9{
+        
+        if verifier == 18{
             return true
         }else{
             return false
         }
+        
     }
-    
-    
+
 }
