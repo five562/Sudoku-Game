@@ -13,31 +13,21 @@ class SudokuVerifier {
     func verify(array:[Int]) -> Bool {
         var verifier = 0
         
-        //Verify the sum of each row is 45
+        //Verify the sum of each row or each column is 45
         for i in 0...8{
             var rowSum = 0
+            var columnSum = 0
             for j in 0...8{
                 rowSum += array[i * 9 + j]
+                columnSum += array[j * 9 + i]
             }
-            if rowSum == 45 {
+            if rowSum == 45 && columnSum == 45{
                 verifier += 1
             }else{
                 verifier += 0
             }
         }
         
-        //Verify the sum of each column is 45
-        for i in 0...8{
-            var columnSum = 0
-            for j in 0...8{
-                columnSum += array[i * 9 + j]
-            }
-            if columnSum == 45{
-                verifier += 1
-            }else{
-                verifier += 0
-            }
-        }
         
         //Verify the sum of each block is 45
         for l in 0...2 {
@@ -56,7 +46,7 @@ class SudokuVerifier {
             }
         }
         
-        if verifier == 27{
+        if verifier == 18 {
             return true
         }else{
             return false
