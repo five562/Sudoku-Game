@@ -26,7 +26,6 @@ class SudokuVerifier {
             }
         }
         
-        
         //Verify the sum of each block is 45
         for l in 0...2 {
             for k in 0...2 {

@@ -14,6 +14,7 @@ var sudokuArray = [Int]()
 
 class SudokuGenerator {
     
+    //Randomize the order of the elements of a given array
     func reorderNumberArray(array: [Int]) -> [Int]{
         var oldNumberArray = array
         var newNumberArray = [Int]()
@@ -26,6 +27,7 @@ class SudokuGenerator {
         return newNumberArray
     }
     
+    //Generate the first 3x3 block in a sudoku
     func firstBlock(array:[Int]) -> [[Int]]{
         var numberArray = array
         var rownumber = [Int]()
@@ -40,6 +42,7 @@ class SudokuGenerator {
         return block
     }
     
+    //Generate the entire sudoku
     func generateSudoku(firstBlock:[[Int]]) -> [[[[Int]]]]{
         var sudoku = [[[[Int]]]]()
         var sudokuRow = [[[Int]]]()
@@ -103,6 +106,7 @@ class SudokuGenerator {
         return sudoku
     }
     
+    //Print sudoku in 9x9 format
     func printSudoku(sudoku:[[[[Int]]]]){
         for l in 0...2{
             for k in 0...2{
@@ -116,6 +120,7 @@ class SudokuGenerator {
         }
     }
     
+    //Allow to swap the columns in sudoku with random order
     func swapColumns(sudoku:[[[[Int]]]])-> [[[[Int]]]]{
         let columnSwapOrder0 = reorderNumberArray(array: [0,1,2])
         var transSudoku = sudoku
@@ -131,6 +136,7 @@ class SudokuGenerator {
         return transSudoku
     }
     
+    //Allow to swap the rows in sudoku with random order
     func swapRows(sudoku:[[[[Int]]]])->[[[[Int]]]]{
         let rowSwapOrder0 = reorderNumberArray(array: [0,1,2])
         var transSudoku = sudoku
