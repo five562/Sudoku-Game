@@ -11,6 +11,7 @@ import Foundation
 let numberArray = [1,2,3,4,5,6,7,8,9]
 var generatedSudoku = [[[[Int]]]]()
 var sudokuArray = [Int]()
+var sudokuGameDisplayedData = [Int]()
 
 class SudokuGenerator {
     
@@ -113,6 +114,7 @@ class SudokuGenerator {
                 for j in 0...2{
                     for i in 0...2{
                         sudokuArray.append(sudoku[l][j][k][i])
+                        sudokuGameDisplayedData.append(sudoku[l][j][k][i])
                         print(sudoku[l][j][k][i],terminator:" ")}
                 }
                 print(" ")
